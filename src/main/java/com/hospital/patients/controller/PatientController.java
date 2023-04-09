@@ -19,12 +19,12 @@ public class PatientController {
 	
 	@GetMapping("/id")
 	public String printPatientId() {
-		return patientService.printName("id patient : 0000000 ");
+		return patientService.printName("id patient : 0000 ");
 	}
 	
 	@GetMapping("/name")
 	public void printPatientName() {
-		System.out.println("name patient : aaaaaaaa");
+		System.out.println("name patient : PatientName");
 	}
 
 }
