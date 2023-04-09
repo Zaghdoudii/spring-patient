@@ -1,0 +1,32 @@
+https://start.spring.io/
+   Projet:Maven
+   Language:Java
+   Spring Boot: 2.7.6
+   Dependencies: Spring Boot DevTools + Spring Web 
+---------------------------------------------------
+
+src/main/java 
+   Nv package:controller 
+
+@RestController
+@RequestMapping("/patient")
+public class PatientController {
+
+        @Autowired 
+	private PatientService patientService; //bean 
+
+        @GetMapping("/id")
+	public String printPatientId() {
+		return patientService.printName("my id ");
+	}
+}
+---------------------------------------------------
+src/main/Java
+   Nv package: service
+
+@Service
+public class PatientService {
+	public String printName(String name) {
+		return name.toUpperCase();
+	}
+}
